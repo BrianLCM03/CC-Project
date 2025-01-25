@@ -1,0 +1,352 @@
+/* Basic page styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 60%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+}
+
+/* Input and textarea styles */
+#taskInput, #taskDescription {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#taskDescription
+{
+    width:800px;
+    height:300px;
+    resize: none;
+}
+
+#taskInput {
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.3s;
+}
+
+li:hover {
+    background-color: #f8f9fa;
+}
+
+.task-number {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-right: 15px;
+}
+
+.task-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+}
+
+.task-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    flex-grow: 1;
+}
+
+.task-actions button {
+    margin-left: 10px;
+}
+
+.task-actions input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.task-actions button:hover {
+    color: #dc3545;
+}
+
+/* General Button Styling */
+.task-actions button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* View Button */
+.task-actions button:nth-child(2) {
+    background-color: #007bff; /* Blue */
+    color: white;
+}
+
+.task-actions button:nth-child(2):hover {
+    background-color: #0056b3; /* Darker Blue */
+    transform: scale(1.05);
+}
+
+/* Edit Button */
+.task-actions button:nth-child(3) {
+    background-color: #ffc107; /* Yellow */
+    color: black;
+}
+
+.task-actions button:nth-child(3):hover {
+    background-color: #e0a800; /* Darker Yellow */
+    transform: scale(1.05);
+}
+
+/* Delete Button */
+.task-actions .delete-btn {
+    background-color: #dc3545; /* Red */
+    color: white;
+}
+
+.task-actions .delete-btn:hover {
+    background-color: #c82333; /* Darker Red */
+    transform: scale(1.05);
+}
+
+/* Checkbox Styling */
+.task-actions .task-checkbox {
+    margin-right: 10px;
+    cursor: pointer;
+    transform: scale(1.2); /* Slightly larger checkbox */
+}
+
+/* Layout for buttons in task-actions */
+.task-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align buttons to the left */
+}
+
+.task-actions button {
+    margin-left: 10px; /* Space between buttons */
+}
+
+.task-actions .task-checkbox {
+    margin-left: 10px; /* Space between checkbox and buttons */
+}
+
+/* Modal styles */
+/* .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 60%;
+    max-width: 500px;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+} */
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Darker background for better contrast */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 70%;
+    max-width: 600px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.close-btn {
+    color: #aaa;
+    font-size: 32px;
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+label {
+    font-size: 18px;
+    color: #555;
+    margin: 10px 0 5px;
+    display: block;
+    text-align: left;
+    width: 100%;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, textarea:focus {
+    border-color: #007bff; /* Blue border on focus */
+    outline: none;
+}
+
+textarea {
+    height: 120px; /* Fixed height */
+    resize: none;
+    margin-bottom: 15px;
+    width: 100%; /* Ensure it spans full width of the modal */
+}
+
+button[type="submit"] {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Modal footer with action buttons */
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.modal-footer button {
+    width: 48%;
+    background-color: #dc3545; /* Red button for closing */
+    color: white;
+    font-size: 16px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-footer button:nth-child(2) {
+    background-color: #007bff; /* Blue button for submission */
+}
+
+.modal-footer button:hover {
+    background-color: #c82333;
+}
+
+.modal-footer button:nth-child(2):hover {
+    background-color: #0056b3;
+}
